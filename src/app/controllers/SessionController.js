@@ -6,6 +6,9 @@ import authConfig from '../../config/auth';
 
 class SessionController {
   async store(req, res) {
+    /**
+     * Validating Requisition Data
+     */
     const schema = Yup.object().shape({
       email: Yup.string()
         .email()
@@ -17,6 +20,9 @@ class SessionController {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
+    /**
+     * Checking if email exists and is correct password
+     */
     const { email, password } = req.body;
 
     const user = await User.findOne({ where: { email } });
