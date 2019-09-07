@@ -65,9 +65,7 @@ class DeveloperController {
      * Fetching data from github api
      */
 
-    const githubResponse = await axios.get(
-      `https://api.github.com/users/${username}`
-    );
+    const githubResponse = await axios.get(process.env.GITHUB_API + username);
 
     const { name, login, bio, location, html_url } = githubResponse.data;
 
