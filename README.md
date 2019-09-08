@@ -1,7 +1,7 @@
 # Payprev Challenger
 
 API desenvolvida em NodeJs para cadastros de developers através da api pública do GitHub e formação de times utilizando os developers cadastrados.
-Para o desenvolvimento da api, foram utilizados o yup, sucrase e o sentry.
+Para o desenvolvimento da api, foram utilizados o PostgreSQL, yup, sucrase e o sentry.
 
 Rota base: 
 https://api-payprev-challenge.herokuapp.com/
